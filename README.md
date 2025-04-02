@@ -49,7 +49,7 @@ What methods are you using to answer the question?
 
 **Feature Engineering**
 
-For this dataset I have to do the follwing transformations:
+For this dataset I have to do the following transformations:
 - Dropping irrelevant column (`ProductId`)
 - Rename columns to shorter but more meaningful names
 - Use OneHotEncoder to extract numerical values from string-type categorical features
@@ -102,14 +102,14 @@ The new dataset, sourced from Kaggle, is titled "Machine Predictive Maintenance 
 These variables are directly applicable to real-world manufacturing operations, making the dataset suitable for predictive maintenance modeling. 
 This shift ensures that the research remains grounded in practical industry applications while maintaining analytical rigor.
 
-**Results**
+Data shows the correlation table shows a strong positive correlation between `Air Temperature` and `Process Temperature` (r = `0.88`), indicating they increase together. 
 
-Based on the initial analysis, data shows the correlation table shows a strong positive correlation between `Air Temperature` and `Process Temperature` (r = `0.88`), indicating they increase together. 
+Rotational speed `RPM` and `Torque` have a strong negative correlation (r = -0.88), suggesting that higher speed is associated with lower torque. `Failure` has the highest positive correlation with `Torque` (r = `0.19`) and tool wear (r = `0.11`), though these correlations are still relatively weak. 
 
-Rotational speed `RPM` and `Torque` have a strong negative correlation (r = -0.88), suggesting that higher speed is associated with lower torque. Failure has the highest positive correlation with torque (r = `0.19`) and tool wear (r = `0.11`), though these correlations are still relatively weak. 
+The rest of the variables show low direct correlation with failure.
 
-Overall, most variables show low direct correlation with failure, implying other factors or combinations may be at play.
 
+### Model Performance
 During the intial run, the models performed fairly well but it still have room for improvement:
 
 #### Accuracy & Confusion Matrix
@@ -123,7 +123,7 @@ During the intial run, the models performed fairly well but it still have room f
 
 
 
-#### 3) Deep Learning Metrics
+#### Deep Learning Metrics
 
 Model Architecture
 
@@ -177,6 +177,15 @@ Its training accuracy of 97.62% and testing accuracy of 95.70% indicate that it 
 This predictive strength allows maintenance to be scheduled optimally, significantly reducing unexpected equipment failures and operational interruptions. 
 
 Overall, deep learning is the best model for predicting and scheduling equipment maintenance, ultimately saving the manufacturing company money through improved efficiency and reliability.
+
+
+### Next Steps
+- Deploy the model
+- Gather more data if possible
+- Apply more fine-tuning techniques, Random Forest, various hyper-parameter trials
+- Perform continous model training and deployment cycles
+- Research on identifying the optimal, best hyper-parameters for Neural Networks (e.g. _Deep Learning with Python_ by Francois Chollet)
+
 ___
 
 ### Outline of project
