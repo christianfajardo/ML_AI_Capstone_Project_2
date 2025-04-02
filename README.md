@@ -6,7 +6,7 @@
 Christian Fajardo
 ___
 
-##### Note: Due to inaccessiblity of data sources originally defined in Module 17, I needed to identify and select an alternative that is closely related to the manufacturing industry.
+##### Note: Due to inaccessibility of data sources originally defined in Module 17, I needed to identify and select an alternative that is closely related to the manufacturing industry.
 
 ---
 
