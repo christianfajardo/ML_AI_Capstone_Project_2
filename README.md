@@ -53,12 +53,16 @@ For this dataset I have to do the follwing transformations:
 - Dropping irrelevant column (`ProductId`)
 - Rename columns to shorter but more meaningful names
 - Use OneHotEncoder to extract numerical values from string-type categorical features
-- Since this dataset is imbalanced, I needed to use ***SMOTE*** provided by the **imblearn** Python library
+- Since this dataset is imbalanced, I needed to use `SMOTE` provided by the `imblearn` Python library
 
 
 #### Model Selection
 
 For this dataset, my methodology will include training supervised machine learning models such as K-Nearest Neighbors (KNN), Decision Trees, Logistic Regression, Support Vector Machines (SVM) to predict potential machine failures.
+
+5-Fold Cross Validation is used to split the data into multiple training and testing subsets, ensuring that every sample is used for validation at least once. 
+
+This approach reduces overfitting and provides a more robust estimate of the model's performance on unseen data.
 
 Finally, I will use Deep Learning (Tensorflow/Keras) as well to perform multiclass classification on `Target` and `Failure Type`.
 
@@ -88,11 +92,6 @@ Here is the model summary:
   - Compare traditional models with the CNN approach using evaluation metrics such as accuracy, precision, recall, F1-score, and ROC-AUC.
   - Consider aspects like model interpretability, training time, and robustness to overfitting.
 
-
-#### Presentation of Results
-
-
-
 ___
 
 ### Results
@@ -113,7 +112,7 @@ Overall, most variables show low direct correlation with failure, implying other
 
 During the intial run, the models performed fairly well but it still have room for improvement:
 
-#### 1) Accuracy & Confusion Matrix
+#### Accuracy & Confusion Matrix
 
 | **Model**                         | **Accuracy** | **Confusion Matrix**           |
 |:----------------------------------|:------------:|:------------------------------:|
@@ -121,16 +120,6 @@ During the intial run, the models performed fairly well but it still have room f
 | **Decision Tree**                 | 0.9795       | [[1932, 7], [34, 27]]          |
 | **Logistic Regression**           | 0.9735       | [[1931, 8], [45, 16]]          |
 | **SVM (Linear Kernel)**           | 0.9770       | [[1936, 3], [43, 18]]          |
-
-
-#### 2) Classification Report Metrics
-
-| **Model**                        | **Precision (0)** | **Recall (0)** | **F1 (0)** | **Precision (1)** | **Recall (1)** | **F1 (1)** | **Macro Avg F1** |
-|:---------------------------------|:-----------------:|:--------------:|:---------:|:-----------------:|:--------------:|:---------:|:----------------:|
-| **K-Nearest Neighbor (K=5)**     | 0.98              | 1.00           | 0.99      | 0.85              | 0.38           | 0.52      | 0.76             |
-| **Decision Tree**                | 0.98              | 1.00           | 0.99      | 0.79              | 0.44           | 0.57      | 0.78             |
-| **Logistic Regression**          | 0.98              | 1.00           | 0.99      | 0.67              | 0.26           | 0.38      | 0.68             |
-| **SVM (Linear Kernel)**          | 0.98              | 1.00           | 0.99      | 0.86              | 0.30           | 0.44      | 0.71             |
 
 
 
