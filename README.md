@@ -150,21 +150,33 @@ Training Accuracy:  `0.9748769998550415`
 Testing Accuracy:  `0.953499972820282`
 
 &nbsp;  
-Confusion Matrix 
+**Confusion Matrix** 
 |                      | **Predicted Negative** | **Predicted Positive** |
 |----------------------|------------------------|------------------------|
-| **Actual Negative**  | TN = 1847              | FP = 92                |
-| **Actual Positive**  | FN = 13                | TP = 48                |
+| **Actual Negative**  | TN = 1865              | FP = 74                |
+| **Actual Positive**  | FN = 12                | TP = 49                |
 
-&nbsp;  
+&nbsp;
 
+**Overall Model Performance**
 | Metric    | Value   |
 |-----------|---------|
-| Accuracy  | 0.9475  |
-| Precision | 0.3429  |
-| Recall    | 0.7869  |
+| Accuracy  | 0.957   |
+| Precision | 0.398   |
+| Recall    | 0.803   |
 
-&nbsp;  
+&nbsp;
+
+
+# Conclusion
+
+Deep learning using TensorFlow outperformed traditional models by demonstrating a robust balance between high overall accuracy and effective identification of equipment failures. 
+
+Its training accuracy of 97.62% and testing accuracy of 95.70% indicate that it generalizes well to unseen data. The confusion matrix—showing only 12 false negatives and 74 false positives—highlights its strong ability to correctly detect failures while minimizing missed alerts. Fewer false negatives are critical for proactive maintenance, ensuring that potential issues are caught early before leading to costly downtime. 
+
+This predictive strength allows maintenance to be scheduled optimally, significantly reducing unexpected equipment failures and operational interruptions. 
+
+Overall, deep learning is the best model for predicting and scheduling equipment maintenance, ultimately saving the manufacturing company money through improved efficiency and reliability.
 ___
 
 ### Outline of project
